@@ -1,0 +1,82 @@
+/*  File:  
+ *    /~heines/91.461/91.461-2015-16f/461-assn/Scrabble_Pieces_AssociativeArray_Jesse_Test.css
+ *  Jesse M. Heines, UMass Lowell Computer Science, heines@cs.uml.edu
+ *  Copyright (c) 2015 by Jesse M. Heines.  All rights reserved.  May be freely 
+ *    copied or excerpted for educational purposes with credit to the author.
+ *  updated by JMH on November 21, 2015 at 10:24 AM
+ */
+h2 {
+    border-bottom: dashed gray;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    
+}
+/* add borders to the table the CSS way */
+table {
+    border-spacing : 0 ;
+    margin: auto;
+    border-collapse : collapse ;
+  }
+  
+  /* format the table cells the CSS way */
+  .target, td {
+    text-align : center ;
+    border : 1px solid gray ;
+    padding : 5px;
+    background-color: palegoldenrod;
+  }
+    .slots {
+        background-color: darkgrey;
+        padding: 20px;
+        margin: 50px;
+    }  
+
+    /*#slot {
+        padding: 20px;
+        border: gray; 
+    }/*
+
+  
+  /*.target, img{
+    
+      display: inline-flex;
+      clear: auto;
+      min-width: 50px;
+      min-height: 50px;
+      max-width: 100px;
+      max-height: 100px; 
+      padding: 0px;
+      margin: auto;    
+  }*/
+  
+  /* format the table head cells the CSS way */
+  tr {
+    padding: 0px; 
+    margin: 0px;
+    background-color: white ;    
+   
+  }
+  #MyTiles {
+    height: 125px;
+    width: 525px;
+    background-color: rgb(238, 238, 238);
+    border: solid gray; 
+    margin: auto;
+    margin-top: 40px;
+}
+
+.tiles img {
+    width: 75px;
+    height: 75px;
+}
+    
+     
+  /* make the table head column separators white */
+  /* (start with the 2nd column and go backwards) */
+  /*th:nth-child(-n+2) {
+    border-right : 1px solid white ;
+  }*/
+  

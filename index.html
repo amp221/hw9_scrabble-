@@ -1,0 +1,85 @@
+<!--
+  Andrea Panaro
+  maria_panaro@student.uml.edu
+  program: implements some of the functionality of a scrabble game  
+-->
+<!DOCTYPE HTML>
+<html>
+    <html lang="en">
+<head>
+  <title>Scrabble </title>
+  <meta charset="utf-8">
+  <meta name="description" content= "Scrabble" />
+  <link type="text/css" rel="stylesheet" href="css/style.css"></link>
+  <!-- include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src= "https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+  <!-- read associative array containing Scrabble pieces -->
+  <script src="js/tiles.js"></script>
+</head>
+    <body>
+        <div id="game">
+            <h2> Scrabble </h2>
+            <table id = "board">
+            <tr>
+                <td id = "x1y1" class = "snapTarget" class = "Tile">
+                    <img src= "css/positions/Tile.png"> 
+                    <a class = "empty" href = "#" onclick="playerMove(x1y1); return false;"></a>
+                </td>
+                <td id = "x2y1" class = "snapTarget" class = "Tile">
+                    <img src= "css/positions/Tile.png"> 
+                  <a class = "empty" href = "#" onclick="playerMove(x2y1); return false;"></a>
+                </td>
+                <td id = "x3y1" class = "snapTarget"class = "Double_Letter">
+                        <img src= "css/positions/Double_Letter.png"> 
+                        <div class = "snapTarget"></div>
+                      <a class = "empty" href = "#" onclick="playerMove(x3y1); return false;"></a>
+                </td>
+                <td id = "x4y1" class = "snapTarget" class = "Tile">
+                        <img src= "css/positions/Tile.png"> 
+                      <a class = "empty" href = "#" onclick="playerMove(x4y1); return false;"></a>
+                </td>
+                <td id = "x5y1" class = "snapTarget" class = "Double_Word">
+                        <img src= "css/positions/Double_Word.png"> 
+                      <a class = "empty" href = "#" onclick="playerMove(x5y1); return false;"></a>
+                </td>
+            </tr>
+            </table>
+
+            <div id="MyTiles">
+              <table id = "MyTileRack">
+                    <td id = "slot_1" class = "slots" class = "snapTarget">
+                        <div id = "Tile_1" class = "tiles">
+                        <!-- <img src= "css/Scrabble_Tiles/Scrabble_Tile_A.jpg"> -->
+                        <!-- <img letter = ''  src= "css/positions/Tile.png" > -->
+                        </div> 
+                        <a class = "taken" href = "#"></a>
+                    </td>
+                    <td id = "slot_2" class = "slots" class = "snapTarget">
+                        <div id = "Tile_2" class = "tiles">
+                            
+                            <!--<img letter='' src= "css/Scrabble_Tiles/Scrabble_Tile_A.jpg"> -->
+                        </div> 
+                        <a class = "taken" href = "#"></a>
+                    </td>
+              </table>
+            </div>     
+        </div>
+    <div id="target"></div>
+      <!-- <script src="js/script.js"></script> -->
+      <script>
+        ( function() {
+            //$( "#Tile" ).draggable({ snap: true });
+            $( ".slots" ).children().draggable({ snap: ".snapTarget", snapTolerance: 100 });
+            //$( "#T3" ).draggable({ snap: ".ui-widget-header", snapMode: "outer" });
+            //$( "#T4" ).draggable({ grid: [ 20, 20 ] });
+            //$( "#T5" ).draggable({ grid: [ 80, 80 ] });
+        }() );
+    </script>
+    </body>
+</html>
