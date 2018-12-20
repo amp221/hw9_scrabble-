@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)file:///Users/mariapanaro/Desktop/GUI/hw9/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Scrabble </title>
+  
+  <meta name="description" content="Scrabble">
+  <link type="text/css" rel="stylesheet" href="./Scrabble_files/style.css">
+  <!-- include jQuery library -->
+  <script src="./Scrabble_files/jquery-3.3.1.js"></script>
+  <script src="./Scrabble_files/jquery-ui.min.js"></script>
+  <script src="./Scrabble_files/jquery-ui-git.js"></script>
+  <script src="./Scrabble_files/jquery-ui.min.js"></script>
+  <script src="./Scrabble_files/jquery-ui.min(1).js"></script>
+  <link rel="stylesheet" href="./Scrabble_files/jquery-ui.css">
+    
+  <!-- read associative array containing Scrabble pieces -->
+  <script src="./Scrabble_files/tiles.js"></script>
+</head>
+    <body style="cursor: auto;">
+        <div id="game">
+            <h2> Scrabble </h2>
+            <svg width="100%" height="100%">
+                    <!-- <rect x="20" y="20" rx="20" ry="20" width="100" height="100" style="fill: palegoldenrod; stroke:black;stroke-width:5;opacity:0.5" /> -->
+                    //Sorry, your browser does not support inline SVG.
+                  //</svg>
+            <table id="board">
+            <tbody><tr>
+                <td id="x1y1" class="snapTarget ui-droppable">
+                    <img src="./Scrabble_files/Tile.png"> 
+                    <a class="empty" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" onclick="playerMove(x1y1); return false;"></a>
+                </td>
+                <td id="x2y1" class="snapTarget ui-droppable">
+                    <img src="./Scrabble_files/Tile.png"> 
+                  <a class="empty" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" onclick="playerMove(x2y1); return false;"></a>
+                </td>
+                <td id="x3y1" class="snapTarget ui-droppable">
+                        <img src="./Scrabble_files/Double_Letter.png"> 
+                        <div class="snapTarget ui-droppable"></div>
+                      <a class="empty" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" onclick="playerMove(x3y1); return false;"></a>
+                </td>
+                <td id="x4y1" class="snapTarget ui-droppable">
+                        <img src="./Scrabble_files/Tile.png"> 
+                      <a class="empty" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" onclick="playerMove(x4y1); return false;"></a>
+                </td>
+                <td id="x5y1" class="snapTarget ui-droppable">
+                        <img src="./Scrabble_files/Double_Word.png"> 
+                      <a class="empty" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" onclick="playerMove(x5y1); return false;"></a>
+                </td>
+            </tr>
+            </tbody></table>
+
+            <div id="MyTiles">
+              <table id="MyTileRack">
+                    <tbody><tr><td id="slot_1" class="slots">
+                        <div id="Tile_1" class="tiles ui-draggable ui-draggable-handle" style="position: relative; width: 75px; right: auto; height: 79px; bottom: auto; left: -55.5px; top: -143px;">
+                        <!-- <img src= "css/Scrabble_Tiles/Scrabble_Tile_A.jpg"> -->
+                        <!-- <img letter = ''  src= "css/positions/Tile.png" > -->
+                        <img src="./Scrabble_files/Scrabble_Tile_B.jpg" alt="B"></div> 
+                        <a class="taken ui-draggable ui-draggable-handle" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" style="position: relative;"></a>
+                    </td>
+                    <td id="slot_2" class="slots">
+                        <div id="Tile_2" class="tiles ui-draggable ui-draggable-handle" style="position: relative; width: 75px; right: auto; height: 79px; bottom: auto; left: -96.5px; top: -143px;">
+                            
+                            <!--<img letter='' src= "css/Scrabble_Tiles/Scrabble_Tile_A.jpg"> -->
+                        <img src="./Scrabble_files/Scrabble_Tile_W.jpg" alt="W"></div> 
+                        <a class="taken ui-draggable ui-draggable-handle" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" style="position: relative;"></a>
+                    </td>
+                    <td id="slot_3" class="slots">
+                            <div id="Tile_3" class="tiles ui-draggable ui-draggable-handle" style="position: relative; width: 75px; right: auto; height: 79px; bottom: auto; left: -35px; top: -143px;">
+                                
+                                <!--<img letter='' src= "css/Scrabble_Tiles/Scrabble_Tile_A.jpg"> -->
+                            <img src="./Scrabble_files/Scrabble_Tile_J.jpg" alt="J"></div> 
+                            <a class="taken ui-draggable ui-draggable-handle" href="file:///Users/mariapanaro/Desktop/GUI/hw9/index.html#" style="position: relative;"></a>
+                        </td>
+              </tr></tbody></table>
+            </div>     
+        </div>
+    <div id="target"></div>
+      <!-- <script src="js/script.js"></script> -->
+      <script>
+        ( function() {
+            //$( "#Tile" ).draggable({ snap: true });
+            $( ".slots" ).children().draggable({ snap: ".snapTarget", snapTolerance: 100 });
+            //$( "#T3" ).draggable({ snap: ".ui-widget-header", snapMode: "outer" });
+            //$( "#T4" ).draggable({ grid: [ 20, 20 ] });
+            //$( "#T5" ).draggable({ grid: [ 80, 80 ] });
+        }() );
+    </script>
+    
+
+</body></html>
