@@ -25,6 +25,7 @@
     <body>
         <div id="game">
             <h2> Scrabble </h2>
+            <div id = "newScore"> </div>
             <table id = "board">
             <tr>
                 <td id = "x1y1" class = "snapTarget" class = "Tile">
@@ -67,15 +68,27 @@
                         </div> 
                         <a class = "taken" href = "#"></a>
                     </td>
+                    <td id = "slot_3" class = "slots" class = "snapTarget">
+                            <div id = "Tile_3" class = "tiles">
+                                
+                                <!--<img letter='' src= "css/Scrabble_Tiles/Scrabble_Tile_A.jpg"> -->
+                            </div> 
+                            <a class = "taken" href = "#"></a>
+                        </td>
               </table>
             </div>     
+            <div id = "options">
+                    <button id = checkWord onclick="checkWord();">check word</button>
+                    <button id = playAgain onclick="playAgain();">play again</button>
+                    <button id = quit onclick="quit();">quit</button>
+            </div>
         </div>
-    <div id="target"></div>
+    <div id="target"></div> 
       <!-- <script src="js/script.js"></script> -->
       <script>
         ( function() {
             //$( "#Tile" ).draggable({ snap: true });
-            $( ".slots" ).children().draggable({ snap: ".snapTarget", snapTolerance: 100 });
+            $( ".slots" ).children().draggable({ snap: ".snapTarget", snapTolerance: 50, snapMode: "inner"  });
             //$( "#T3" ).draggable({ snap: ".ui-widget-header", snapMode: "outer" });
             //$( "#T4" ).draggable({ grid: [ 20, 20 ] });
             //$( "#T5" ).draggable({ grid: [ 80, 80 ] });
