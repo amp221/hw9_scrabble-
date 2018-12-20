@@ -1,7 +1,8 @@
 <!--
   Andrea Panaro
   maria_panaro@student.uml.edu
-  program: implements some of the functionality of a scrabble game  
+  program: implements some of the functionality of a scrabble game 
+  helpful people and links: wp3schools, jon silva, steve kim 
 -->
 <!DOCTYPE HTML>
 <html>
@@ -25,8 +26,9 @@
     <body>
         <div id="game">
             <h2> Scrabble </h2>
-            <div id = "newScore"> </div>
+            <div id = "newScore" class = "newScore" > </div>
             <table id = "board">
+                <!-- code for board positions -->
             <tr>
                 <td id = "x1y1" class = "snapTarget" class = "Tile">
                     <img src= "css/positions/Tile.png"> 
@@ -51,7 +53,7 @@
                 </td>
             </tr>
             </table>
-
+<!-- tile holder -->
             <div id="MyTiles">
               <table id = "MyTileRack">
                     <td id = "slot_1" class = "slots" class = "snapTarget">
@@ -89,9 +91,6 @@
         ( function() {
             //$( "#Tile" ).draggable({ snap: true });
             $( ".slots" ).children().draggable({ snap: ".snapTarget", snapTolerance: 50, snapMode: "inner"  });
-            //$( "#T3" ).draggable({ snap: ".ui-widget-header", snapMode: "outer" });
-            //$( "#T4" ).draggable({ grid: [ 20, 20 ] });
-            //$( "#T5" ).draggable({ grid: [ 80, 80 ] });
         }() );
     </script>
     </body>

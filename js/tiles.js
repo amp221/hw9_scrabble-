@@ -2,6 +2,7 @@
  */
 var newTile;
 var letterIndex;
+let score = 0;
 var MyLetterArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var ScrabbleTiles = [];
 // ScrabbleTiles.A
@@ -33,34 +34,25 @@ ScrabbleTiles["Y"] = { "value": 4, "img": "css/Scrabble_Tiles/Scrabble_Tile_Y.jp
 ScrabbleTiles["Z"] = { "value": 10, "img": "css/Scrabble_Tiles/Scrabble_Tile_Z.jpg", "original-distribution": 1, "number-remaining": 1 };
 ScrabbleTiles[""] = { "value": 0, "img": "", "original-distribution": 2, "number-remaining": 2 };
 
+// random letter generator
 let randomLetter = function () {
     let letterIndex = Math.floor(Math.random() * (27 - 1) + 1);
     return MyLetterArr[letterIndex]; // guaranteed to be random
 }
-
+// set image and alt text value of tile
 let generateTiles = function () {
-    //let letterIndex = Math.floor(Math.random() * (27 - 1) + 1);
-
     let letter = randomLetter(letterIndex);
-    //console.log(letter);
-    //console.log(ScrabbleTiles[letter]);
-    //console.log(ScrabbleTiles[letter].img);
     return "<img src =" + ScrabbleTiles[letter].img + " alt = " + letter + " >";
 };
-
+// helper function that creates a word for the score portion
 let parseWord = function(letters) {
     return letters.join("");
 }
 
-/* 
-create check word function 
-calculates the value of the word. 
-must be sucessive letters calculates for 
-double letter position and the doble word position.  
-*/
-
 let word = ["", "", "", "", ""];
 let wordScore = "";
+
+// initializes peces and tracks them 
 $(document).ready(function () {
     $("#Tile_1").append(generateTiles());
     $("#Tile_2").append(generateTiles());
@@ -85,10 +77,9 @@ $(document).ready(function () {
         }
         
     });
-
+    checkWord();
 });
-//console.log(sum);
-let score = 0;
+// checks word value and considers special positions 
 let checkWord = function() {
     score = 0;
     for( var i = 0; i <= 4 ; i++ ) {
@@ -97,18 +88,19 @@ let checkWord = function() {
         } else { 
             score += ScrabbleTiles[word[i]].value; 
         }
-    //score += ScrabbleTiles[word[i]].value;
     }
     if(ScrabbleTiles[word[4]].value != 0)
     {
         score = 2 * score;
     }
-    $('#newScore').append("<p>" + " word: " + parseWord(word) + ", score: " + score + "</p>"); 
+    $("#newScore").children().remove();
+    $('#newScore').text( "|  word: " + parseWord(word) + " | score: " + score + "  |"); 
+
     console.log(score);
 }
 let playAgain = function () {
-
+    location.reload();
 };
 let quit = function () {
-
+    location.reload();
 };

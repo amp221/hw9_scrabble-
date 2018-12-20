@@ -1,10 +1,4 @@
-/*  File:  
- *    /~heines/91.461/91.461-2015-16f/461-assn/Scrabble_Pieces_AssociativeArray_Jesse_Test.css
- *  Jesse M. Heines, UMass Lowell Computer Science, heines@cs.uml.edu
- *  Copyright (c) 2015 by Jesse M. Heines.  All rights reserved.  May be freely 
- *    copied or excerpted for educational purposes with credit to the author.
- *  updated by JMH on November 21, 2015 at 10:24 AM
- */
+
 h2 {
     border-bottom: dashed gray;
     text-align: center;
@@ -14,66 +8,76 @@ h2 {
     font-size: 40px;
     
 }
-/* add borders to the table the CSS way */
 table {
     border-spacing : 0 ;
     margin: auto;
     border-collapse : collapse ;
-  }
+}
   
-  /* format the table cells the CSS way */
-  .target, td {
+
+.target, td {
     text-align : center ;
     border : 1px solid gray ;
     padding : 5px;
     background-color: palegoldenrod;
-  }
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: palegoldenrod;
+}
+button {
 
-    /*<rect x: "20" y="20" rx="20" ry="20" width="100" height="100" style="fill: palegoldenrod; stroke:black;stroke-width:5;opacity:0.5" /> -->
-    //Sorry, your browser does not support inline SVG.*/
-  }
-    .slots {
-        background-color: darkgrey;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid lightpink;
+    color: gray; 
+    font-weight: bold;
+    background: white;
+    border-radius: 5px;
+    width: 150px;
+    padding: 5px;
+     
+}
+#options {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 50%;
+    align-content: center;
+}
+  
+  .slots {
+        background-color: lightskyblue;
         padding: 20px;
         margin: 50px;
+        border: 2pt dashed white;
+        
     }  
+  #newScore { 
+    display: flex;
+    justify-content: space-around;
 
-    /*#slot {
-        padding: 20px;
-        border: gray; 
-    }/*
-
-  
-  /*.target, img{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    color: lightskyblue;
+    font-variant-caps: all-petite-caps;
+    font-weight: bold;
+    margin: 20px; 
+    margin: auto; 
+    padding: 10px;
+   
+  }
     
-      display: inline-flex;
-      clear: auto;
-      min-width: 50px;
-      min-height: 50px;
-      max-width: 100px;
-      max-height: 100px; 
-      padding: 0px;
-      margin: auto;    
-  }*/
-  
-  /* format the table head cells the CSS way */
-  tr {
+tr {
     padding: 0px; 
     margin: 0px;
     background-color: white ;    
    
-  }
+}
   #MyTiles {
     height: 125px;
     width: 525px;
     background-color: rgb(238, 238, 238);
-    border: solid gray; 
+    border-top: 2pt solid lightgray; 
+    border-bottom: 2pt solid lightgray;  
     margin: auto;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .tiles img {
